@@ -5,9 +5,9 @@ on:
 jobs:
   set-configuration:
     name: set appservice configuration
-    runs-on: [ self-hosted, tutorial-be-dev, vm-<username>SelfHost-az-<region>-sbx-001 ]
+    runs-on: [ self-hosted, tutorial-be-dev, vm-user8SelfHost-az-usw3-sbx-001 ]
     environment: dev
-    
+
     steps:
     - name: Login via Azure CLI
       run: |
@@ -17,7 +17,7 @@ jobs:
     - name: Set Web App Settings
       uses: Azure/appservice-settings@v1
       with:
-        app-name: app-<username>-az-<region>-dev-001
+        app-name: app-user8-az-usw3-dev-001
         app-settings-json: |
           [
             {
