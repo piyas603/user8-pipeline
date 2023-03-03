@@ -21,6 +21,7 @@ jobs:
     environment:
       name: uat
       url: https://app-user8-az-usw3-uat-001.azurewebsites.net/swagger/index.html
+      
 
     steps:
     - name: Download Artifact
@@ -57,6 +58,6 @@ jobs:
       with:
         token: ${{ secrets.WORKFLOW_TOKEN }}
         repository: ${{ env.REPOSITORY }}
-        event-type: <username>-tutorial-be-dast-sit
+        event-type: user8-tutorial-be-dast-sit
         client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
 
