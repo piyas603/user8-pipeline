@@ -18,7 +18,7 @@ jobs:
     - name: Set Web App Settings
       uses: Azure/appservice-settings@v1
       with:
-        app-name: app-user8-az-usw3-sit-001
+        app-name: app-user8-az-usw3-uat-001
         app-settings-json: |
           [
             {
