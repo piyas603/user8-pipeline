@@ -12,15 +12,15 @@ env:
   REPOSITORY: "piyas603/user8-tutorial-backend"
   GITREF: ${{ github.event.inputs.ref }}
   ARTIFACT_NAME: "artifact-tutorial-backend"
-  APP_RESOURCE_NAME: app-user8-az-usw3-sit-001
+  APP_RESOURCE_NAME: app-user8-az-usw3-uat-001
 
 jobs:
   deploy-app-service:
     name: Deploy
     runs-on: [ self-hosted, tutorial-be-dev, vm-user8SelfHost-az-usw3-sbx-001 ]
     environment:
-      name: sit
-      url: https://app-user8-az-usw3-sit-001.azurewebsites.net/swagger/index.html
+      name: uat
+      url: https://app-user8-az-usw3-uat-001.azurewebsites.net/swagger/index.html
 
     steps:
     - name: Download Artifact
